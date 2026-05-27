@@ -1,0 +1,11 @@
+ALERT:
+EC2 instance CPU usage crossed 95% for the last 15 minutes.
+
+OBSERVATIONS:
+- High incoming traffic spike detected
+- Application response times increased
+- Auto Scaling did not trigger new instances
+- Memory usage also increasing steadily
+
+IMPACT:
+Users experiencing slow response times and intermittent failures.
