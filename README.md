@@ -1,4 +1,3 @@
-````md
 # 🚨 AI-Powered Incident ChatOps Assistant
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
