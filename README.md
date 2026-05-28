@@ -1,5 +1,10 @@
 ````md
 # 🚨 AI-Powered Incident ChatOps Assistant
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
+![OpenAI](https://img.shields.io/badge/OpenAI-AI-orange)
+![Slack](https://img.shields.io/badge/Slack-ChatOps-purple)
+![Status](https://img.shields.io/badge/Project-Active-success)
 
 > Production issue hits.  
 > Alerts start flooding.  
@@ -218,7 +223,7 @@ The `.env` file is excluded from version control using:
 ## 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/ai-chatops-assistant.git
+git clone https://github.com/pritamwankhede9224/ai-chatops-assistant.git
 ```
 
 ---
@@ -291,6 +296,27 @@ This project helped reinforce practical understanding of:
 
 ---
 
+# 💡 Key Takeaways
+
+Building this project helped me better understand:
+
+- Async operational workflows
+- Slack webhook integrations
+- AI orchestration patterns
+- Real-time incident automation
+- Backend API lifecycle handling
+- Practical ChatOps architecture
+
+---
+
+# ⚠️ Current Limitations
+
+- Local development currently uses ngrok tunneling
+- AI responses depend on external API latency
+- No persistent incident storage implemented yet
+- Multi-user context handling is limited
+
+---
 # 🔮 Future Enhancements
 
 * AWS CloudWatch Integration
@@ -306,9 +332,36 @@ This project helped reinforce practical understanding of:
 
 ---
 
-# 📸 Screenshots
+# 📸 Screenshots & Live Workflow
 
-> Screenshots and workflow demos will be added here.
+## 🚨 Incident Trigger Workflow
+
+The engineer triggers an incident analysis directly from Slack using the `/analyze` slash command.
+
+![Incident Trigger](screenshots/slack-incident-trigger.png)
+
+---
+
+## 🤖 AI Incident Analysis Response
+
+The AI assistant automatically performs operational analysis and generates:
+- Severity Assessment
+- Root Cause Analysis
+- Impact Summary
+- Recommended Fixes
+- Prevention Strategies
+
+Directly inside Slack.
+
+![AI Incident Analysis](screenshots/slack-ai-analysis.png)
+
+---
+
+## ⚙️ FastAPI Backend Documentation
+
+Interactive FastAPI Swagger documentation exposing operational endpoints used by the ChatOps assistant.
+
+![FastAPI Docs](screenshots/fastapi-docs.png)
 
 ---
 
