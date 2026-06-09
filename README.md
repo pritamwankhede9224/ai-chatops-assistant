@@ -194,6 +194,7 @@ ai-chatops-assistant/
 ├── .gitignore
 ├── README.md
 │
+├── System Workflow/
 ├── screenshots/
 ├── architecture/
 └── sample_logs/
@@ -331,6 +332,44 @@ Building this project helped me better understand:
 
 ---
 
+## 🏗️ Architecture Overview
+
+The AI ChatOps Assistant automates incident triaging and root cause analysis through a Slack-based operational workflow.
+
+### High-Level Architecture
+
+![Architecture Diagram](screenshots/architecture-diagram.png)
+
+### Workflow
+
+1. Engineer submits an incident using the Slack `/analyze` command.
+2. Slack sends the request to the FastAPI backend through a secure webhook endpoint.
+3. FastAPI validates the request and launches an asynchronous background task.
+4. The incident details are analyzed using OpenAI GPT models.
+5. AI generates:
+
+   * Severity Assessment
+   * Root Cause Analysis (RCA)
+   * Impact Analysis
+   * Remediation Steps
+   * Prevention Recommendations
+6. The generated incident report is delivered back to Slack through webhooks.
+7. Engineers receive a structured operational response directly inside Slack.
+
+### Core Components
+
+| Component        | Purpose                              |
+| ---------------- | ------------------------------------ |
+| Slack            | User interaction & ChatOps interface |
+| FastAPI          | Backend API service                  |
+| OpenAI API       | AI-powered incident analysis         |
+| Background Tasks | Asynchronous processing              |
+| Slack Webhooks   | Response delivery                    |
+| Python           | Core application logic               |
+| ngrok            | Local development tunneling          |
+
+---
+
 # 📸 Screenshots & Live Workflow
 
 ## 🚨 Incident Trigger Workflow
@@ -376,6 +415,23 @@ It is designed to assist operational teams by:
 * enabling faster first-response workflows
 
 The focus is on practical AI integration into real operational systems — not just building another chatbot.
+
+---
+
+## 🚀 Upcoming Future Enhancements
+
+Planned improvements for the next version:
+
+* [ ] Incident Severity Classification (P1/P2/P3/P4)
+* [ ] Log File Upload & Analysis
+* [ ] Historical Incident Database
+* [ ] Incident Trend Dashboard
+* [ ] AWS CloudWatch Integration
+* [ ] Azure Monitor Integration
+* [ ] Automated Ticket Creation
+* [ ] Multi-LLM Support
+* [ ] Cloud-Specific RCA Templates
+* [ ] Knowledge Base Powered Incident Analysis
 
 ---
 
